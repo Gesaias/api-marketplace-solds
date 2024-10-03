@@ -28,16 +28,26 @@
 Api criada para usuários cadastrados poderem anúnciar e comprar produtos.
 
 ## Project setup
-
+Configure o enviroment
 ```bash
-# Docker DB
-$ docker compose up -d
+cp -r .env.example ./.env
+```
 
-# Project
+Suba o banco de dados em docker
+```bash
+docker compose up -d
+```
+
+Instale as dependencias e rode os scripts DB:
+```bash
 $ pnpm install
 $ pnpm db:migrate
 $ pnpm db:generate
 $ pnpm db:seed
+```
+VERSÃO REDUZIDA:
+```bash
+pnpm install && pnpm db:migrate && pnpm db:generate && pnpm db:seed
 ```
 
 ## Compile and run the project
